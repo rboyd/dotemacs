@@ -29,4 +29,4 @@
 (require 'twittering-mode)
 
 (global-linum-mode t)
-
+(add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
