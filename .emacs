@@ -1,7 +1,10 @@
 (setq path "/usr/local/heroku/bin:/Users/rboyd/.rvm/gems/ruby-1.9.3-p194/bin:/Users/rboyd/.rvm/gems/ruby-1.9.3-p194@global/bin:/Users/rboyd/.rvm/rubies/ruby-1.9.3-p194/bin:/Users/rboyd/.rvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/rboyd/bin:/Users/rboyd/.rvm/bin")
 (setenv "PATH" path)
 
-(setq backup-directory-alist '(("." . "~/emacs-backups")))
+;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
+(custom-set-variables
+  '(auto-save-file-name-transforms '((".*" "~/.emacs.d/autosaves/\\1" t)))
+  '(backup-directory-alist '((".*" . "~/.emacs.d/backups/"))))
 
 (package-initialize)
 (evil-mode 1)        ;; enable evil-mode
