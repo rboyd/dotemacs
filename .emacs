@@ -17,7 +17,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (better-tango-dark)))
+ '(custom-enabled-themes (quote (forest-monk)))
  '(custom-safe-themes (quote ("26a372a59d30dfedea863c51687c816c84f54a44e9e0e790289e27bb033a9f4f" "71b172ea4aad108801421cc5251edb6c792f3adbaecfa1c52e94e3d99634dee7" "501caa208affa1145ccbb4b74b6cd66c3091e41c5bb66c677feda9def5eab19c" default)))
  '(weblogger-config-alist (quote (("default" ("user" . "user") ("server-url" . "http://bravenewbits.com/xmlrpc/") ("weblog" . "1")))))
  ;; Put autosave files (ie #foo#) and backup files (ie foo~) in ~/.emacs.d/.
@@ -80,6 +80,7 @@
   "u" 'outline-up-heading)
 
 (global-linum-mode t)
+(setq linum-format "%d ")
 
 (add-to-list 'auto-mode-alist '("\.cljs$" . clojure-mode))
 
